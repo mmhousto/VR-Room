@@ -6,48 +6,32 @@ using UnityEngine;
 public class ClockTime : MonoBehaviour
 {
 
-    public GameObject hourHand, minuteHand, secondHand;
+    private const float
+        hoursToDegrees = 360f / 12f,
+        minutesToDegrees = 360f / 60f,
+        secondsToDegrees = 360f / 60f;
 
-    private DateTime currentTime;
+    public Transform hours, minutes, seconds;
+    public bool analog;
 
-    string seconds, minutes, hours;
-
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        SetTimeClock();
-        InvokeRepeating(nameof(UpdateTimeClock), 1, 1);
-    }
-
-    void SetTimeClock()
-    {
-        currentTime = DateTime.Now;
-        seconds = currentTime.ToString("ss");
-        minutes = currentTime.ToString("mm");
-        hours = currentTime.ToString("hh");
-
-        float secondRotation = (Convert.ToInt32(seconds) * 6);
-        secondHand.transform.Rotate(new Vector3(0, secondRotation, 0));
-
-        float minuteRotation = (Convert.ToInt32(minutes) * 6);
-        minuteHand.transform.Rotate(new Vector3(0, minuteRotation, 0));
-
-        float hourRotation = (Convert.ToInt32(hours) * 30);
-        hourHand.transform.Rotate(new Vector3(0, hourRotation, 0));
-    }
-
-    void UpdateTimeClock()
-    {
-        secondHand.transform.Rotate(new Vector3(0, 6, 0));
-    }
-
-    void UpdateMinuteHand()
-    {
-        minuteHand.transform.Rotate(new Vector3(0, 6, 0));
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        UpdateMinuteHand();
+        if (analog)
+        {
+            TimeSpan timespan = DateTime.Now.TimeOfDay;
+            hours.localRotation =
+                Quaternion.Euler(90 + (float)timespan.TotalHours * hoursToDegrees, 0f, -90f);
+            minutes.localRotation =
+                Quaternion.Euler(90 + (float)timespan.TotalMinutes * minutesToDegrees, 0f, -90f);
+            seconds.localRotation =
+                Quaternion.Euler(90 + (float)timespan.TotalSeconds * secondsToDegrees, 0f, -90f);
+        }
+        else
+        {
+            DateTime time = DateTime.Now;
+            hours.localRotation = Quaternion.Euler(90 + time.Hour * hoursToDegrees, 0f, -90f);
+            minutes.localRotation = Quaternion.Euler(90 + time.Minute * minutesToDegrees, 0f, -90f);
+            seconds.localRotation = Quaternion.Euler(90 + time.Second * secondsToDegrees, 0f, -90f);
+        }
     }
 }
