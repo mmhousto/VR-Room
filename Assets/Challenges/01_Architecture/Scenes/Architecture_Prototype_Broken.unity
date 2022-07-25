@@ -3873,18 +3873,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 28e0735174c1c4ed683675c57b4d07a2, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.7
+  m_Pitch: 0.89
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 167
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 8
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -3985,7 +3985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a895b5e674db04d8b4f8110c068852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldLoop: 1
+  shouldLoop: 0
   audioClips:
   - {fileID: 8300000, guid: ffcac3d6adf3c4a5a9fceb69ed040b5f, type: 3}
   - {fileID: 8300000, guid: 5852b85f5b6c7456db15d397337533a3, type: 3}
@@ -4002,11 +4002,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee04e5a7e7214571866857aadcf7924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minInterval: 0
-  maxInterval: 2
+  minInterval: 6
+  maxInterval: 15
   OnIntervalElapsed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 569398358}
+        m_TargetAssemblyTypeName: PlaySoundsFromList, Assembly-CSharp
+        m_MethodName: RandomClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &573412864
 Transform:
   m_ObjectHideFlags: 0
@@ -5620,18 +5632,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5852b85f5b6c7456db15d397337533a3, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.7
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 152
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 8
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -5732,7 +5744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a895b5e674db04d8b4f8110c068852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldLoop: 1
+  shouldLoop: 0
   audioClips:
   - {fileID: 8300000, guid: ffcac3d6adf3c4a5a9fceb69ed040b5f, type: 3}
   - {fileID: 8300000, guid: 5852b85f5b6c7456db15d397337533a3, type: 3}
@@ -5749,11 +5761,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee04e5a7e7214571866857aadcf7924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minInterval: 0
-  maxInterval: 2
+  minInterval: 6
+  maxInterval: 15
   OnIntervalElapsed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 914317558}
+        m_TargetAssemblyTypeName: PlaySoundsFromList, Assembly-CSharp
+        m_MethodName: RandomClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &918911803
 Transform:
   m_ObjectHideFlags: 0
@@ -10419,18 +10443,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ffcac3d6adf3c4a5a9fceb69ed040b5f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.7
+  m_Pitch: 1.08
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 170
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 8
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10531,7 +10555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a895b5e674db04d8b4f8110c068852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldLoop: 1
+  shouldLoop: 0
   audioClips:
   - {fileID: 8300000, guid: ffcac3d6adf3c4a5a9fceb69ed040b5f, type: 3}
   - {fileID: 8300000, guid: 5852b85f5b6c7456db15d397337533a3, type: 3}
@@ -10548,11 +10572,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee04e5a7e7214571866857aadcf7924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minInterval: 0
-  maxInterval: 2
+  minInterval: 6
+  maxInterval: 15
   OnIntervalElapsed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1486113703}
+        m_TargetAssemblyTypeName: PlaySoundsFromList, Assembly-CSharp
+        m_MethodName: RandomClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1487119488
 PrefabInstance:
   m_ObjectHideFlags: 0
