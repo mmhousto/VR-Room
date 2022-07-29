@@ -20,7 +20,7 @@ public class PlayVideo : MonoBehaviour
     private VideoPlayer videoPlayer = null;
     private MeshRenderer meshRenderer = null;
 
-    private int index = 0;
+    private int index = -1;
 
     private void Awake()
     {
@@ -55,7 +55,9 @@ public class PlayVideo : MonoBehaviour
 
     public void NextClip()
     {
+        Stop();
         index = ++index % videoClips.Count;
+        videoPlayer.clip = videoClips[index];
         Play();
     }
 
