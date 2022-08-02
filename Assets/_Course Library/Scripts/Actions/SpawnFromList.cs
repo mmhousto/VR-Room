@@ -46,6 +46,7 @@ public class SpawnFromList : MonoBehaviour
     {
         GameObject prefabToSpawn = originalObjects[index];
         GameObject newObject = Instantiate(prefabToSpawn, spawnPoint.position, spawnPoint.rotation);
+        newObject.tag = "Trail";
 
         if (attachToSpawnPoint)
             newObject.transform.SetParent(spawnPoint);
