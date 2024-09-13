@@ -8,6 +8,10 @@ TagManager:
   - RedRecord
   - Lighter
   - Stickable
+  - DK
+  - Rampage
+  - Mario
+  - Pokemon
   layers:
   - Default
   - TransparentFX
