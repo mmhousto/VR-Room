@@ -23,7 +23,7 @@ public class BallBounce : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(rb.velocity.magnitude);
-        audioSource.PlayOneShot(audioSource.clip, rb.velocity.magnitude);
+        Debug.Log(rb.linearVelocity.magnitude);
+        audioSource.PlayOneShot(audioSource.clip, rb.linearVelocity.magnitude);
     }
 }

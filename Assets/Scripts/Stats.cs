@@ -6,7 +6,7 @@ using TMPro;
 public class Stats : MonoBehaviour
 {
 
-    private TextMeshProUGUI statsLabel;
+    public TextMeshProUGUI statsLabel;
 
     public int ProjectilesFired { get; private set; }
 
@@ -21,7 +21,8 @@ public class Stats : MonoBehaviour
 
     private void UpdateUI()
     {
-        statsLabel.text = $"Stats\nProjectiles Fired: {ProjectilesFired}\nPolaroids Took: {PolaroidsTook}\n\nPress 'Reset' or secondary button to wipe the stats and restart the scene.";
+        if (statsLabel != null)
+            statsLabel.text = $"Stats\nProjectiles Fired: {ProjectilesFired}\nPolaroids Took: {PolaroidsTook}\n\nPress 'Reset' or secondary button to wipe the stats and restart the scene.";
     }
 
     public void ProjectileFired()
