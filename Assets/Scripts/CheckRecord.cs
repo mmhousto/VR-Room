@@ -8,6 +8,7 @@ public class CheckRecord : MonoBehaviour
     public RotateObject record;
     public int currentRecord = 0;
 
+    // Git Gud
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("BlueRecord"))
